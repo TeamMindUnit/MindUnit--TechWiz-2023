@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/index.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <!-- Primary Meta Tags -->
+    <title>ViroShield - Predict, Protect, Prevent</title>
+    <meta name="description" content=" Your Health Guardian. We harness the immense power of cutting-edge Big Data techniques to proactively predict, diligently protect, and effectively prevent potential viral threats. Our innovative application ensures you're armed with crucial insights, empowering you to make informed decisions about your health.">
+    <meta name="keywords" content="Health prediction, Viral disease prevention, Influenza awareness, Health monitoring, ViroShield.">
+</head>
+<body>
+    <header id="header">
+      <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="./assets/images/viroshield-logo.png" alt="" srcset=""></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <a class="navbar-brand" href="/"><img src="./assets/images/viroshield-logo.png" alt="" srcset=""></a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="hero" class="pb-5 d-flex align-items-center">
+          <div class="container">
+            <div class="row gx-md-5 flex-column-reverse flex-md-row">
+              <div class="col-md-7 align-items-center d-flex">
+                <div class="hero-inner">
+                  <h5 class="fw-bold">ViroShield: Your Health Guardian</h5>
+                  <h2 class="section-title display-6 fw-bold">Predict, Protect, Prevent</h2>
+                  <p class="lead">Empowering you with data-driven insights to stay ahead of viral threats. ViroShield utilizes the power of Big Data techniques to predict, protect, and prevent potential health risks. Stay informed and safeguard your well-being with real-time updates.</p>
+                  <a href="#symptomsChecker" class="btn btn-outline-primary fw-bold rounded-pill">Get Started</a>
+                </div>
+              </div>
+              <div class="col-md-5 align-items-center d-flex">
+                <img id="hero-img" src="./assets/images/viroshield.svg" alt="" class="img-fluid mb-5 mb-md-0">
+              </div>
+            </div>
+          </div>
+      </section>
+      <section id="symptomsChecker" class="py-5 my-5">
+        <div class="container">
+            <h2 class="text-center section-title display-5">Symptoms Checker</h2>
+            <p class="lead text-center mb-5">Check your symptoms to get insights. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="col-md-8 offset-md-2 card p-5 m-auto mb-4">
+                <h4 class="text-center mb-4">Check Your Symptoms</h4>
+                <form id="symptomsForm">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <select class="form-select" id="fever" name="fever">
+                          <option selected value="none">Select</option>
+                          <option value="low">Low</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="high">High</option>
+                        </select>
+                        <label for="fever">Fever</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <select class="form-select" id="cough" name="cough">
+                          <option selected value="none">Select</option>
+                          <option value="dry">Dry</option>
+                          <option value="wet">Wet</option>
+                        </select>
+                        <label for="cough">Cough</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <select class="form-select" id="fatigue" name="fatigue">
+                          <option selected value="none">Select</option>
+                          <option value="mild">Mild</option>
+                          <option value="moderate">Moderate</option>
+                          <option value="severe">Severe</option>
+                        </select>
+                        <label for="fatigue">Fatigue</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <select class="form-select" id="difficultyBreathing" name="difficultyBreathing">
+                          <option selected value="none">Select</option>
+                          <option value="yes">Yes</option>
+                          <option value="no">No</option>
+                        </select>
+                        <label for="difficultyBreathing">Difficulty Breathing</label>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary rounded-pill d-flex m-auto mt-4 fw-bold" onclick="checkSymptoms()">Check Symptoms</button>
+                </form>
+                <div id="symptomResult" class="mt-3 text-center"></div>
+            </div>
+        </div>
+    </section>
+    
+      <section id="features" class="py-5 text-white">
+        <div class="container my-5">
+            <h2 class="section-title text-center display-5 mb-5">What makes ViroShield effective?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class='bx bx-shield'></i>
+                    <h4>Data-Driven Insights</h4>
+                    <p class="lead">ViroShield leverages Big Data techniques to analyze trends and patterns, providing accurate predictions for potential health threats.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class='bx bx-heart'></i>
+                    <h4>Health Monitoring</h4>
+                    <p class="lead">Stay informed about your health status through real-time data visualizations, enabling proactive measures against viral risks.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class='bx bx-line-chart'></i>
+                    <h4>Predict and Prevent</h4>
+                    <p class="lead">Predictive analytics empower you to take timely actions, preventing potential health issues and safeguarding your well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq" class="py-5 my-5">
+      <div class="container">
+          <h2 class="section-title text-center display-5">Frequently Asked Questions</h2>
+          <p class="lead text-center mb-5">Questions about ViroShield? Find answers below!</p>
+          
+          <!-- FAQs -->
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          How does ViroShield predict health threats?
+                      </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                          ViroShield employs advanced Big Data techniques to analyze various datasets and trends, enabling accurate predictions for potential health threats based on historical data and patterns.
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          How can ViroShield help in preventing health issues?
+                      </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                          By providing predictive analytics, ViroShield empowers users with insights to take timely precautions and actions, preventing potential health issues and contributing to overall well-being.
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Is ViroShield's data analysis accurate and reliable?
+                      </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                          Yes, ViroShield's data analysis is built on robust methodologies, ensuring accurate predictions by continuously refining algorithms and incorporating up-to-date data sources.
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                          How do I start using ViroShield?
+                      </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                          Getting started with ViroShield is easy. Sign up, input relevant health data, and let our predictive tools guide you towards a safer, healthier life.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center text-white py-4">Made with ❤️ by Mind Unit &copy;</div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="assets/index.js"></script>
+</body>
+</html>

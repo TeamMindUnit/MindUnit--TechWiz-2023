@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
+html,body{font-size:15px;font-weight:400;font-family:'Jost', sans-serif;color:var(--dark);background-color:var(--light)}
+
+:root{
+  --primary:#102542;
+  --secondary: #e84545;
+  --purple:#6C63FF;
+  --light:#f8f9fa;
+  --dark:#252525;
+  --bg: #FFF9F5;
+}
+
+/* general */
+*{scroll-behavior:smooth}
+input:focus{box-shadow:none !important}
+.section-title{font-weight:600}
+/* btn */
+.btn-outline-primary{border-color:var(--secondary);color:var(--secondary)}
+.btn-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active{border-color:var(--secondary) !important;background-color:var(--secondary) !important;color:#fff}
+/* header */
+#header{position:fixed;top:0;z-index:5;width:100%;transition: .2s ease-in-out;}
+#header.stickyHeader{background-color:#fff;box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px}
+.navbar-brand{height:80px}
+.navbar-brand > img{max-height:100%;max-width:100%}
+.navbar-toggler:focus{box-shadow:none}
+.nav-link{font-size: 17px;}
+/* hero-section */
+#hero{padding-top: 8rem;min-height:100vh;background:var(--bg) url('images/bg-faint-orange.svg') left center no-repeat;background-size:cover}
+#hero h5{color:var(--secondary)}
+/* symptomsChecker-section */
+
+/* features-section */
+#features{background:var(--primary)}
+#features i{color:var(--secondary);font-size:50px}
+/* faq-section */
+#faq{background-color:var(--light)}
+#faq .accordion-button{padding:2.25rem;font-size:1.2rem;font-weight:600}
+#faq .accordion-body{padding:0 2.25rem 2rem}
+#faq .accordion-button:not(.collapsed),
+#faq .accordion-button:focus{color:var(--primary);background-color:#fff;box-shadow:none;border:none}
+#faq .accordion-button::after{content:"\ebc0";font-family:boxicons !important;background-image:none}
+#faq .accordion-button:not(.collapsed)::after{content:"\eb8b"}
+/* footer */
+#footer{background-color:#122c3d}
+/* animations */
+@keyframes tick{
+  0%{opacity:1;transform:scale(1) rotateY(0deg)}
+  50%{opacity:0;transform:scale(.8) rotateY(180deg)}
+  100%{opacity:1;transform:scale(1) rotateY(360deg)}
+}
