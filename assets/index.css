@@ -23,7 +23,7 @@ input:focus{box-shadow:none !important}
 /* header */
 #header{position:fixed;top:0;z-index:5;width:100%;transition: .2s ease-in-out;}
 #header.stickyHeader{background-color:#fff;box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px}
-.navbar-brand{height:80px}
+.navbar-brand{height:70px}
 .navbar-brand > img{max-height:100%;max-width:100%}
 .navbar-toggler:focus{box-shadow:none}
 .nav-link{font-size: 17px;}
@@ -31,7 +31,9 @@ input:focus{box-shadow:none !important}
 #hero{padding-top: 8rem;min-height:100vh;background:var(--bg) url('images/bg-faint-orange.svg') left center no-repeat;background-size:cover}
 #hero h5{color:var(--secondary)}
 /* symptomsChecker-section */
-
+.form-select{transition: all .3s ease-in-out;}
+.form-select:focus{border-color:#eee;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;}
+.form-select option.selected{background-color: red;}
 /* features-section */
 #features{background:var(--primary)}
 #features i{color:var(--secondary);font-size:50px}
@@ -45,6 +47,11 @@ input:focus{box-shadow:none !important}
 #faq .accordion-button:not(.collapsed)::after{content:"\eb8b"}
 /* footer */
 #footer{background-color:#122c3d}
+
+@media(max-width: 575px){
+.navbar-brand{height:60px}
+}
+
 /* animations */
 @keyframes tick{
   0%{opacity:1;transform:scale(1) rotateY(0deg)}
