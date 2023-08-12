@@ -30,3 +30,30 @@ def symptoms_checker(request):
 
 def dashboard(request):
     return render(request, 'admin/dashboard.html')
+
+import sweetviz as sv
+from autoviz.AutoViz_Class import AutoViz_Class
+import pandas as pd
+
+# def sweetviz_report(request):
+#     df = pd.read_excel('E:/Ah2101a/ViroShield/flunet_dataset.xlsx')
+#     df.iteritems = df.items
+#     report = sv.analyze(df)
+#     report.show_html('report.html')   
+#     return render(request, 'admin/sweetviz_report.html')
+def sweetviz_report(request):
+
+    df = pd.read_excel('E:/Ah2101a/ViroShield/flunet_dataset.xlsx')
+    # df.iteritems = df.items
+    report = sv.analyze(df)
+    report.show_html('report.html')  # This line generates the report HTML
+
+    # Pass the report file path to the template
+    context = {'report_path': 'report.html'}
+    return render(request, 'admin/sweetviz_report.html', context)
+
+def autoviz_report(request):
+    df = pd.read_excel('E:/Ah2101a/ViroShield/flunet_dataset.xlsx')
+    AV = AutoViz_Class()
+    AV_report = AV.AutoViz(df)
+    return render(request, 'admin/autoviz_report.html')
