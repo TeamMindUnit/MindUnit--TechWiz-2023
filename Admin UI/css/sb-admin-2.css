@@ -2429,9 +2429,9 @@ a:focus{outline:none}
 @media (min-width: 768px) {
 .chart-pie{height:calc(20rem - 43px)!important}
 }
-.bg-login-image{background:url('../img/student.jpg');background-position:center;background-size:cover}
-.bg-register-image{background:url('../img/student.jpg');background-position:center;background-size:cover}
-.bg-password-image{background:url('../img/student.jpg');background-position:center;background-size:cover}
+.bg-login-image{background:url('../img/data.jpg');background-position:center;background-size:cover}
+.bg-register-image{background:url('../img/data.jpg');background-position:center;background-size:cover}
+.bg-password-image{background:url('../img/data.jpg');background-position:center;background-size:cover}
 form.user .custom-checkbox.small label{line-height:1.5rem}
 form.user .form-control-user{font-size:.8rem;border-radius:10rem;padding:1.5rem 1rem}
 form.user .btn-user{font-size:.8rem;border-radius:10rem;padding:.75rem 1rem}
