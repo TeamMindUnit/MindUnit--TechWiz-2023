@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = "home"),
     path('symptoms_checker/', views.symptoms_checker, name='symptoms_checker'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 ]
