@@ -26,3 +26,7 @@ def symptoms_checker(request):
         return render(request, 'viroshield/index.html', context)
 
     return render(request, 'viroshield/index.html')
+
+
+def dashboard(request):
+    return render(request, 'admin/dashboard.html')
