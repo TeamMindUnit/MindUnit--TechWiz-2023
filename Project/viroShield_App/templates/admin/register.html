@@ -66,7 +66,7 @@
                                     Register Account
                                 </a>
                             </form> -->
-                            <form action="/register" method="POST">
+                            <form action="{% url 'register' %}" method="POST">
                                 {% csrf_token %}
                                 {% if error %}
                                 <div class="alert alert-danger">{{ error }}</div>

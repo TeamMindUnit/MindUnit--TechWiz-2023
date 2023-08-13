@@ -118,6 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'viroSield/static/'
 # LOGIN_REDIRECT_URL = 'dashboard/'
+APPEND_SLASH = False
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

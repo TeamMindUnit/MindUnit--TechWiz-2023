@@ -8,7 +8,6 @@ urlpatterns = [
     path('symptoms_checker/', views.symptoms_checker, name='symptoms_checker'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('register/', views.register, name='register'),
-    
     # path('userlogin/', views.userlogin, name='userlogin'),
     path('sweetviz-report/', views.sweetviz_report, name='sweetviz-report'),
     path('autoviz-report/', views.autoviz_report, name='autoviz-report'),

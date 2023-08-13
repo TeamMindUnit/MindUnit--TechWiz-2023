@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Patient, HealthStatus, Prediction
+from .models import Patient, HealthStatus, Prediction,User
 import sweetviz as sv
 from autoviz.AutoViz_Class import AutoViz_Class
 import pandas as pd
@@ -55,11 +55,11 @@ def register(request):
     
     else:
         postData = request.POST
-        f_name = postData.get('fname')
-        l_name = postData.get('lname')
-        email = postData.get('email')
-        phone = postData.get('phone')
-        password = postData.get('password')
+        f_name = postData.POST.get('fname')
+        l_name = postData.POST.get('lname')
+        email = postData.POST.get('email')
+        phone = postData.POST.get('phone')
+        password = postData.POST.get('password')
 
         value = {
             'firstName': f_name,
@@ -68,18 +68,20 @@ def register(request):
             'password':password,
             'phoneno':phone,
         }
-        myuser = User(first_name=f_name, last_name=l_name, email=email, phone_no=phone, password=password)
-
+        # cust = User(first_name=f_name, last_name=l_name, email=email, phone_no=phone, password=password)
+        User.objects.create(
+            first_name=f_name, last_name=l_name, email=email, phone_no=phone , password=password
+        )
         error_msg = None
 
         if(not f_name):
             error_msg = 'First Name Required'
-        elif len(f_name)> 30:
+        elif len(f_name)> 20:
             error_msg = 'First Name cannot be less than 3 characters'
 
         if(not l_name):
             error_msg = 'Last Name Required'
-        elif len (l_name)> 30:
+        elif len (l_name)> 20:
             error_msg = 'Last Name cannot be less than 3 characters'
 
         if(not phone):
@@ -90,7 +92,7 @@ def register(request):
         if(not email):
             error_msg = 'Email Required'
         
-        elif myuser.isExist():
+        elif cust.isExist():
             error_msg = 'Email already exist'
 
 
@@ -100,8 +102,8 @@ def register(request):
             error_msg = 'Password Name cannot be less than 8 characters'
 
         if(not  error_msg):
-            myuser.password = make_password(myuser.password)
-            myuser.register()
+            cust.password = make_password(cust.password)
+            cust.register()
             return redirect('productIndex')
 
         else:
