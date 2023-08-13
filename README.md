@@ -7,11 +7,22 @@
 - Email: admin@mindunit.com
 - Password: mindunit
 
+## 🧑🏻‍💻 Admin Credentials
+- Username: User
+- Password: demo@321
+
 ## 🔗 Routes
 
-- `/`: Home Page
-- `/admin`: Admin Dashboard
-- `/admin/login`: Admin Login
+- `/` : Home Page
+- `/admin` : Admin Dashboard
+- `/admin/login` : Admin Login
+- `/dashboard` : User Dashboard
+
+## 🔗 Important Links
+- [Figma ProtoType](https://www.figma.com/proto/eog5uf4qzKnbrPt2z2ymgT/ViroShield?type=design&node-id=1-2&t=H7V3aKDiBSrUN3Sm-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&mode=design)
+- [Blog](https://www.tumblr.com/mind-unit/725526259960020992/influenza-awareness-symptoms-impact-and?source=share)
+- [Github Repo](https://github.com/TeamMindUnit/MindUnit--TechWiz-2023/tree/main)
+- [Tableau Data Visualization](https://public.tableau.com/app/profile/mind.unit/viz/Influenza_Data_Analysis/AllCasesOfInfluenza)
 
 ## Team Behind ViroShield
 
