@@ -4,18 +4,36 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 
 
 function checkSymptoms() {
-  // Get selected values from form elements
-  var fever = document.getElementById('fever').value;
-  var cough = document.getElementById('cough').value;
-  var fatigue = document.getElementById('fatigue').value;
-  var difficultyBreathing = document.getElementById('difficultyBreathing').value;
+    const fever = document.getElementById('fever').value;
+    const cough = document.getElementById('cough').value;
+    const fatigue = document.getElementById('fatigue').value;
+    const difficultyBreathing = document.getElementById('difficultyBreathing').value;
+    const symptomResult = document.getElementById('symptomResult');
 
-  // Perform logic to check symptoms and display result
-  // ...
-
-  // Update the 'symptomResult' div with the result
-  var symptomResultDiv = document.getElementById('symptomResult');
-  symptomResultDiv.innerHTML = "Potential viral infection"; // Replace with actual result
+    if (fever === 'none' || cough === 'none' || fatigue === 'none' || difficultyBreathing === 'none') {
+        symptomResult.textContent = 'Select all options';
+    } else {
+        fetch('/symptoms_checker', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}',  // Replace with the actual CSRF token
+            },
+            body: JSON.stringify({
+                fever: fever,
+                cough: cough,
+                fatigue: fatigue,
+                difficultyBreathing: difficultyBreathing
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            symptomResult.textContent = data.prediction_result;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 }
 
 // header stuck

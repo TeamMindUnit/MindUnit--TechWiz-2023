@@ -44,8 +44,14 @@
                         <a class="nav-link" href="#faq">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary rounded-pill px-4 btn-sm py-1 ms-3 text-white" href="/admin">Login</a>
+                        <a class="nav-link" href="/admin">Login</a>
                     </li>
+                    <li class="nav-item">
+                      {% if user.is_authenticated %}
+                      <a class="nav-link btn btn-primary rounded-pill px-4 btn-sm py-1 ms-3 text-white" href="{% url 'dashboard' %}">Dashboard</a>
+                      {% endif %}
+                    </li>
+                    <!-- Assuming this is in a template file -->
                 </ul>
             </div>
             </div>
@@ -81,7 +87,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-floating mb-3">
-                        <select class="form-select" id="fever" name="fever">
+                        <select class="form-select" id="fever" name="fever" required>
                           <option selected value="none">Select</option>
                           <option value="low">Low</option>
                             <option value="moderate">Moderate</option>
@@ -92,7 +98,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating mb-3">
-                        <select class="form-select" id="cough" name="cough">
+                        <select class="form-select" id="cough" name="cough" required>
                           <option selected value="none">Select</option>
                           <option value="dry">Dry</option>
                           <option value="wet">Wet</option>
@@ -102,7 +108,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating mb-3">
-                        <select class="form-select" id="fatigue" name="fatigue">
+                        <select class="form-select" id="fatigue" name="fatigue" required>
                           <option selected value="none">Select</option>
                           <option value="mild">Mild</option>
                           <option value="moderate">Moderate</option>
@@ -113,7 +119,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating mb-3">
-                        <select class="form-select" id="difficultyBreathing" name="difficultyBreathing">
+                        <select class="form-select" id="difficultyBreathing" name="difficultyBreathing" required>
                           <option selected value="none">Select</option>
                           <option value="yes">Yes</option>
                           <option value="no">No</option>
