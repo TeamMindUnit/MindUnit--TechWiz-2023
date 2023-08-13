@@ -2,12 +2,27 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=28&duration=3500&pause=500&color=151CF7&center=true&vCenter=true&width=435&lines=Viro+Shield;Team+Mind+Unit;TechWiz+2023;" alt="Typing SVG" />
 </div>
 
-## 🧑🏻‍💻 Admin Credentials
+## Instructions
+1. Download zip file and extract it
+2. To set up the project, you can use the following commands:
+```
+cd Project
+pip install django
+py manage.py makemigrations
+py manage.py migrate
+pip install pandas==1.4.4
+pip install sweetviz
+pip install autoviz
+pip install wheel
+py manage.py runserver
+```
+
+## Admin Credentials
 - Username: Admin
 - Email: admin@mindunit.com
 - Password: mindunit
 
-## 🧑🏻‍💻 Admin Credentials
+## User Credentials
 - Username: User
 - Password: demo@321
 
